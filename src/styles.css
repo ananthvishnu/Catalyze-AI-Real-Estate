@@ -1,1 +1,339 @@
-/* You can add global styles to this file, and also import other style files */
+.w-webflow-badge {
+    display: none !important;
+  }
+  * {
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  *:focus {
+    outline: 0 !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f8f9fb;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1ad079;
+    border-radius: 10px;
+  }
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    transition: 0.2s;
+  }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    transition: 0.2s;
+  }
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    transition: 0.2s;
+  }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholde {
+    transition: 0.2s;
+  }
+  input:focus:-ms-input-placeholder,
+  textarea:focus:-ms-input-placeholde {
+    opacity: 0;
+  }
+  input:focus::-moz-placeholder,
+  textarea:focus::-moz-placeholder {
+    opacity: 0;
+  }
+  input:focus:-moz-placeholder,
+  textarea:focus:-moz-placeholder {
+    opacity: 0;
+  }
+  input:focus::-webkit-input-placeholder,
+  textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+  }
+
+
+
+  .footer__radio-container.w-radio.is--active {
+    border-color: #1ad079;
+    color: #1ad079;
+  }
+  .footer__text-area {
+    resize: none;
+  }
+
+
+ /* Snippet gets rid of top margin on first element in any rich text*/
+ .w-richtext > :first-child {
+        margin-top: 0;
+      }
+      /* Snippet gets rid of bottom margin on last element in any rich text*/
+      .w-richtext > :last-child,
+      .w-richtext ol li:last-child,
+      .w-richtext ul li:last-child {
+        margin-bottom: 0;
+      }
+      /* Snippet prevents all click and hover interaction with an element */
+      .clickable-off {
+        pointer-events: none;
+      }
+      /* Snippet enables all click and hover interaction with an element */
+      .clickable-on {
+        pointer-events: auto;
+      }
+      /* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+      .div-square::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+      /*Hide focus outline for main content element*/
+      main:focus-visible {
+        outline: -webkit-focus-ring-color auto 0px;
+      }
+      /* Make sure containers never lose their center alignment*/
+      .container-medium,
+      .container-small,
+      .container-large {
+        margin-right: auto !important;
+        margin-left: auto !important;
+      }
+      /*Reset buttons, and links styles*/
+      a {
+        color: inherit;
+        text-decoration: inherit;
+        font-size: inherit;
+      }
+      /*Apply "..." after 5 lines of text */
+      .text-style-5lines {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
+      /*Apply "..." after 4 lines of text */
+      .text-style-4lines {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
+      /*Apply "..." after 3 lines of text */
+      .text-style-3lines {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      /*Apply "..." after 2 lines of text */
+      .text-style-2lines {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      /*Apply "..." after 2 lines of text */
+      .text-style-1lines {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+
+      /*Fluid responsive */
+      html {
+        font-size: 0.875rem;
+      }
+      @media screen and (max-width: 1280px) and (min-width: 768px) {
+        html {
+          font-size: 1vw;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        a {
+          cursor: default;
+        }
+      }
+
+      .ventures__collection-item:nth-child(1) {
+        width: 30.56rem;
+        height: 21.39rem;
+      }
+      .ventures__collection-item:nth-child(2) {
+        width: 46.53rem;
+        height: 31.39rem;
+        margin-left: auto;
+      }
+      .ventures__collection-item:nth-child(3) {
+        width: 54.51rem;
+        height: 35.35rem;
+      }
+      .ventures__collection-item:nth-child(4) {
+        width: 30.56rem;
+        height: 21.39rem;
+        margin-left: auto;
+        margin-top: auto;
+      }
+
+      @media only screen and (max-width: 767px) {
+        .hero__bg-wrap {
+          transform: translateY(0px) !important;
+        }
+        .ventures__collection-item:nth-child(1) {
+          width: 100%;
+          height: 100%;
+        }
+        .ventures__collection-item:nth-child(2) {
+          width: 100%;
+          height: 100%;
+        }
+        .ventures__collection-item:nth-child(3) {
+          width: 100%;
+          height: 100%;
+        }
+        .ventures__collection-item:nth-child(4) {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      [data-btn]:hover .btn-bg {
+        transform: scale(0.92);
+      }
+      [data-btn]:hover .btn-circle {
+        -webkit-transition: 0.6s;
+        transition: 0.6s;
+        transform: scale(2.2);
+      }
+      [data-btn]:hover .btn-circle.mod--2 {
+        -webkit-transition: 0.8s;
+        transition: 0.8s;
+        transform: scale(2.2);
+      }
+
+      [data-link]:hover .button__dot {
+        transform: scale(1);
+      }
+      [data-link]:after {
+        content: "";
+        background: #1ad079;
+        display: block;
+        position: absolute;
+        left: 0px;
+        bottom: -2px;
+        transition: all 400ms ease;
+        height: 1px;
+        width: 0%;
+      }
+      [data-link="white"]:after {
+        background: #fff;
+      }
+      [data-link]:hover:after {
+        width: 100%;
+      }
+
+      [data-link-footer-info]:before,
+      [data-link-footer-info]:after {
+        content: "";
+        background: #83899d;
+        display: block;
+        position: absolute;
+        left: 0px;
+        bottom: -2px;
+        height: 1px;
+        transition: all 400ms ease;
+        width: 100%;
+      }
+      [data-link-footer-info]:after {
+        background: #fff;
+        width: 0%;
+      }
+      [data-link-footer-info]:hover:after {
+        width: 100%;
+      }
+      [data-link-footer-info]:hover {
+        color: #fff;
+      }
+
+      .input-wrap:hover .w-input {
+        transform: scale(0.95);
+      }
+      .input-wrap:hover .w-input::-webkit-input-placeholder {
+        color: #fff;
+      }
+      .input-wrap:hover .w-input:-moz-placeholder {
+        color: #fff;
+      }
+      .input-wrap:hover .w-input::-moz-placeholder {
+        color: #fff;
+      }
+      .input-wrap:hover .w-input:-ms-input-placeholder {
+        color: #fff;
+      }
+
+      .input-wrap:hover .w-input.mod--white::-webkit-input-placeholder {
+        color: #07133b;
+      }
+      .input-wrap:hover .w-input.mod--white:-moz-placeholder {
+        color: #07133b;
+      }
+      .input-wrap:hover .w-input.mod--white::-moz-placeholder {
+        color: #07133b;
+      }
+      .input-wrap:hover .w-input.mod--white:-ms-input-placeholder {
+        color: #07133b;
+      }
+
+      input[type="radio"]:checked ~ .w-form-label {
+        color: #1ad079;
+      }
+      input[type="checkbox"]:checked ~ .w-form-label {
+        color: #1ad079;
+      }
+      .radio-wrap:hover .radio-button {
+        border-color: #fff;
+        box-shadow: inset 0 0 0 0.3rem #071238;
+      }
+      .radio-wrap:has(input[type="radio"]:checked) {
+        border-color: #1ad079;
+      }
+      .radio-button.w--redirected-checked {
+        border-color: #1ad079 !important;
+        box-shadow: none !important;
+      }
+
+      @-webkit-keyframes BGhero {
+        0% {
+          opacity: 0;
+        }
+        33% {
+          opacity: 1;
+        }
+        66% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .hero__bg.mod--2 {
+        -webkit-animation: BGhero 8s linear infinite;
+        -moz-animation: BGhero 8s linear infinite;
+        animation: BGhero 8s linear infinite;
+      }
+
+      [data-btn-play]:hover .img.mod--btn-play {
+        transform: scale(0.8);
+      }
+      [data-btn-play]:hover .img.mod--btn-play-circle {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      .w-lightbox-container {
+        overflow: hidden;
+      }
