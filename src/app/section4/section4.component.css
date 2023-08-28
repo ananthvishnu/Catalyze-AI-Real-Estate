@@ -1,0 +1,15 @@
+.opportunity__desc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .opportunity__card {
+    text-align: center;
+  }
+  
+  .opportunity__card .lottie.icon-size-medium img {
+    display: inline-block; /* Ensure the image doesn't have any extra spacing */
+    vertical-align: middle;
+  }
+  

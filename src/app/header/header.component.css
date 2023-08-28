@@ -1,0 +1,220 @@
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color:rgb(228, 246 ,240) ;
+  border-radius: 10px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Initially hide the dropdown list */
+.dropdown-list {
+  display: none;
+}
+
+/* Show the dropdown list when hovering over the dropdown button */
+.dropdown:hover .dropdown-list {
+  display: block;
+}
+
+/* Style the dropdown items */
+.dropdown__item {
+  padding: 10px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Style the dropdown items on hover */
+.dropdown__item:hover {
+  background-color: white;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for the collapsible menu button */
+.header__menu-button {
+  cursor: pointer;
+}
+
+/* Style for the menu lines in the button */
+.header__menu-line {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Rotate and fade in/out menu lines when the menu is open/closed */
+.header__menu-button.active .menu-line__top {
+  transform: rotate(-45deg) translate(-4px, 4px);
+  opacity: 0;
+}
+
+.header__menu-button.active .menu-line__middle {
+  transform: scaleX(0);
+}
+
+.header__menu-button.active .menu-line__bottom {
+  transform: rotate(45deg) translate(-4px, -4px);
+  opacity: 0;
+}
+
+/* Style for the menu container */
+.header__menu-container {
+  display: none;
+  /* Add other styles for the menu container, such as background color and positioning */
+}
+
+/* Show the menu container when the active class is applied */
+.header__menu-container.active {
+  display: block;
+  /* Add other styles for the expanded menu container */
+}
+
+
+
+
+
+
+
+
+
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #07133b;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: none;
+  }
+  .navbar .nav-item:hover .nav-link {
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
+}
+/* ============ desktop view .end// ============ */
+
+a {
+  font-family: 15.89px "Poppins", sans-serif;
+  color: rgb(7, 19, 59);
+  font-weight: 500;
+}
+
+/* Custom styles for buttons */
+
+.btn-outline {
+  border-color: #1ad079;
+}
+
+/* Custom styles for the flat navigation bar */
+.navbar {
+  box-shadow: 0px 40px 40px -34px rgba(0, 0, 0, 0.08);
+}
+.navbar-brand {
+  color: #343a40; /* Brand text color */
+  margin-right: 100px;
+}
+.navbar-toggler {
+  border: none; /* Remove border from toggler */
+}
+.navbar-toggler-icon {
+  /* Change color of the toggler icon */
+  border: none;
+}
+.navbar-nav .nav-link {
+  color: #343a40; /* Nav link color */
+}
+
+.dropdown-menu {
+  border-radius: 10px;
+  position: fixed;
+  border: none;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.dropdown-item {
+  margin-top: 10%;
+
+  color: rgb(7, 19, 59);
+  border-radius: 10px;
+  font-size: 15.85px; /* Dropdown item color */
+}
+
+.dropdown-item:hover {
+  background: rgb(228, 246, 240);
+}
+
+.navbar {
+  border-radius: 10px;
+  position: fixed;
+  top: 20px;
+  left: 65px;
+  right: 65px;
+  z-index: 1000;
+  background-color: #f8f9fa;
+  padding: 10px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  font-family: 17.5px "Poppins", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Disable other items when hovering over one item */
+.nav-item:hover ~ .nav-item {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
