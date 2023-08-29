@@ -10,10 +10,10 @@
       <div class="form-blcok mod--footer w-form">
         <form
           id="wf-form-contact-form"
-          name="wf-form-contact-form"
-          data-name="contact-form"
-          method="get"
+          name="wf-form-contact-form"          
           class="form"
+          [formGroup]="contactForm"
+           (submit)="onSubmit()"
         >
           <div class="columns mod--form">
             <div class="col mod--form">
@@ -21,56 +21,80 @@
                 <input
                   type="text"
                   class="input w-input"
-                  maxlength="256"
-                  name="footer-name-2"
-                  data-name="Footer Name 2"
+                  maxlength="20"
+                  name="name"
                   placeholder="Name"
                   id="footer-name-2"
+                  formControlName="name"
                 />
+                <span *ngIf="!name?.valid && (name?.touched || name?.dirty)" class="text-warning">
+                  <span class="text-warning text-center" *ngIf="name?.errors?.['required']">
+                     Name is Required !
+                  </span>
+                  <span class="text-warning text-center" *ngIf="name?.errors?.['maxlength']">
+                   Maximum length is 10 Characters !
+                </span>
+                <span class="text-warning text-center" *ngIf="name?.errors?.['pattern']">
+                  Only letters Allowed !
+               </span>
+                 </span>
               </div>
+
+
+
+
               <div class="input-wrap">
                 <input
                   type="email"
                   class="input w-input"
-                  maxlength="256"
-                  name="Email"
-                  data-name="Email"
+                  name="email"
                   placeholder="Email"
                   id="Email-4"
                   required
+                  formControlName="email"
                 />
+                <span *ngIf="!email?.valid && (email?.touched || email?.dirty)" class="text-warning">
+                  <span class="text-warning text-center" *ngIf="email?.errors?.['required']">
+                     Email is Required !
+                  </span>
+                 </span>
+                 <span *ngIf="email?.hasError('email') && (email?.touched || email?.dirty)" class="text-warning">
+                  <span class="text-warning text-center">
+                    Enter a Valid Email Address!
+                  </span>
+                </span>
               </div>
+
+
               <div class="radios-container">
                 <label class="radio-wrap w-radio"
-                  ><div
-                    class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input w--redirected-checked"
-                  ></div>
-                  <input
-                    type="radio"
-                    name="contact-radio"
-                    id="financial-services"
-                    value="financial-services"
-                    data-name="contact-radio"
-                    required
-                    checked
-                    style="opacity: 0; position: absolute; z-index: -1"
-                  /><span
-                    class="radio-label w-form-label"
-                    for="financial-services"
-                    >Financial Services</span
-                  ></label
-                ><label class="radio-wrap w-radio"
                   ><div
                     class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input"
                   ></div>
                   <input
                     type="radio"
-                    name="contact-radio"
+                    name="sections"
+                    id="financial-services"
+                    value="financial-services"
+                    required
+                    checked
+                    style="opacity: 0; position: absolute; z-index: -1"
+                    formControlName = "sections"
+                  />
+                  <span class="radio-label w-form-label" for="financial-services">Financial Services</span>
+                  </label>
+                  <label class="radio-wrap w-radio">
+                    <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-button w-radio-input">
+                       
+                    </div>
+                  <input
+                    type="radio"
+                    name="sections"
                     id="real-estate"
                     value="real-estate"
-                    data-name="contact-radio"
                     required
                     style="opacity: 0; position: absolute; z-index: -1"
+                    formControlName = "sections"
                   /><span class="radio-label w-form-label" for="real-estate"
                     >Real Estate</span
                   ></label
@@ -81,29 +105,38 @@
               <div class="input-wrap mod--textarea">
                 <textarea
                   placeholder="Message.."
-                  maxlength="5000"
+                  maxlength="200"
                   id="Message-2"
-                  name="Message-2"
-                  data-name="Message 2"
+                  name="message"
                   class="input mod--textarea w-input"
+                  formControlName="message"
+
                 ></textarea>
+                <span *ngIf="!message?.valid && (message?.touched || message?.dirty)" class="text-warning">
+                  <span class="text-warning text-center" *ngIf="message?.errors?.['required']">
+                     Message is Required !
+                  </span>
+                  <span class="text-warning text-center" *ngIf="message?.errors?.['maxlength']">
+                   Maximum length is 200 Characters !
+                  </span>
+                  <span class="text-warning text-center" *ngIf="message?.errors?.['pattern']">
+                    Only Letters Allowed !
+                   </span>
+                 </span>
               </div>
+
+
+
               <div data-btn class="form__submit-wrap">
                 <div form-submitted="anim" class="form__result active">
-                  <img
-                    loading="lazy"
-                    src="../../assets/fonts/63a1cf4c37e85e655378e1dd_ico-submit-check.svg"
-                    alt
-                    class="form__result-ico"
-                  />
+                  
                 </div>
-                <input
+                <button
                   type="submit"
                   value="Submit"
-                  data-wait="Submit"
-                  form-submitted="anim"
-                  class="form__submit active w-button"
-                />
+                  class="form__submit"
+                  [disabled]="!contactForm.valid"
+                >Submit</button>
                 <div class="btn-circles mod--btn">
                   <div class="btn-circle"></div>
                   <div class="btn-circle mod--2"></div>
