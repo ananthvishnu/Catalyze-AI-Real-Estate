@@ -1,0 +1,11 @@
+.approach__tabs-link {
+    /* Add your regular styling here */
+    display: inline-block;
+    /* ... other styles ... */
+  }
+  
+  .approach__tabs-link:hover {
+    background-color: #141f45;
+    color: white; /* Change this to your desired hover background color */
+    /* Additional styles for when the element is hovered */
+  }

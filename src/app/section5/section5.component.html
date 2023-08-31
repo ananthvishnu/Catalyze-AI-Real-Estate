@@ -3,38 +3,60 @@
     <div class="approach__inner">
       <div class="approach__tabs-container w-tabs">
         <div class="approach__tabs-menu w-tab-menu">
-          <a class="approach__tabs-link w-inline-block w-tab-link w--current">
+          <!--Button 1 -->
+          <a
+            class="approach__tabs-link w-inline-block w-tab-link w--current"
+            (click)="showContent(1)"
+          >
             <div class="approach__number-container">
               <div class="approach__tab-number">1</div>
             </div>
             <div class="approach__link-text">Big<br />Data</div>
-            <div class="approcah__tabs-hover"></div>
-           </a>
-            <a class="approach__tabs-link w-inline-block w-tab-link">
-                <div class="approach__number-container">
+            <!-- <div class="approcah__tabs-hover"></div> -->
+          </a>
+
+          <!--Button 2 -->
+          <a
+            class="approach__tabs-link w-inline-block w-tab-link"
+            (click)="showContent(2)"
+          >
+            <div class="approach__number-container">
               <div class="approach__tab-number">2</div>
             </div>
-            <div class="approach__link-text">Event-<br />Driven</div></a>
-            <a class="approach__tabs-link w-inline-block w-tab-link">
-                <div class="approach__number-container">
+            <div class="approach__link-text">Event-<br />Driven</div>
+          </a>
+
+          <!--Button 3 -->
+          <a
+            class="approach__tabs-link w-inline-block w-tab-link"
+            (click)="showContent(3)"
+          >
+            <div class="approach__number-container">
               <div class="approach__tab-number">3</div>
             </div>
-            <div class="approach__link-text">
-              Artifical<br />Intelligence
-            </div>
-            </a>
-            <a class="approach__tabs-link w-inline-block w-tab-link">
-                <div class="approach__number-container">
+            <div class="approach__link-text">Artifical<br />Intelligence</div>
+          </a>
+
+          <!--Button 4 -->
+          <a
+            class="approach__tabs-link w-inline-block w-tab-link"
+            (click)="showContent(4)"
+          >
+            <div class="approach__number-container">
               <div class="approach__tab-number">4</div>
             </div>
             <div class="approach__link-text">Predictive<br />Analytics</div>
-        </a>
+          </a>
+
+
         </div>
         <div class="approach__tabs-content w-tab-content">
-          <div class="approach__tab-pane w-tab-pane w--tab-active" >
+          <!---content 1-->
+          <ng-container *ngIf="activeContent === 1">
             <div class="approach__tab-container">
               <div class="approach__img-container">
-                <img src="../../assets/fonts/63a1773692843c4162b68cc6_big%20data.svg"
+                <img
+                  src="../../assets/fonts/63a1773692843c4162b68cc6_big%20data.svg"
                   alt
                   class="fullscreen-img"
                 />
@@ -52,8 +74,10 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div data-w-tab="Tab 2" class="approach__tab-pane w-tab-pane">
+          </ng-container>
+
+          <!---content 2-->
+          <ng-container *ngIf="activeContent === 2">
             <div class="approach__tab-container">
               <div class="approach__img-container">
                 <img
@@ -76,8 +100,10 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div  class="approach__tab-pane w-tab-pane">
+          </ng-container>
+
+          <!---content 3-->
+          <ng-container *ngIf="activeContent === 3">
             <div class="approach__tab-container">
               <div class="approach__img-container">
                 <img
@@ -98,8 +124,10 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div  class="approach__tab-pane w-tab-pane">
+          </ng-container>
+
+          <!---content 4-->
+          <ng-container *ngIf="activeContent === 4">
             <div class="approach__tab-container">
               <div class="approach__img-container">
                 <img
@@ -122,12 +150,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </ng-container>
         </div>
       </div>
 
+      <!-------------------------------------------->
 
-      
       <div class="approach__add-info">
         <h2 class="approach__title">Our approach</h2>
         <div class="approach__title-container title-container__desktop">
@@ -138,10 +166,7 @@
           <div class="approach__text">
             Catalyze AI predicts to sell per year.
           </div>
-          <a
-            data-btn
-            href="#"
-            class="button button--fill w-inline-block"
+          <a data-btn href="#" class="button button--fill w-inline-block"
             ><div class="button-text">Sign Up</div>
             <div class="btn-circles mod--btn">
               <div class="btn-circle"></div>

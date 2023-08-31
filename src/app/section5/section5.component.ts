@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./section5.component.css']
 })
 export class Section5Component {
+  
+  activeContent: number | null = 1;
 
+  showContent(contentNumber: number): void {
+    this.activeContent = contentNumber;
+  }
 }
+

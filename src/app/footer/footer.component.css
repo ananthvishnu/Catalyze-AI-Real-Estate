@@ -1,0 +1,27 @@
+/* Your custom CSS styles here */
+.active-input {
+  background-color: green; /* Change to your desired color */
+}
+
+.radio-button {
+    background-color: green;
+}
+
+
+
+/* Assuming your mobile breakpoint is 768px */
+@media screen and (max-width: 768px) {
+  .card-header {
+    background-color: transparent;
+    border: none;
+  }
+
+  .btn-link {
+    width: 100%;
+    text-align: left;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+}

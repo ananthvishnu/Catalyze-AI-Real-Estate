@@ -1,15 +1,77 @@
-.opportunity__desc-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+
+.section--opportunity {
+  font-family: "Poppins", sans-serif !important;
+  color: #07153d;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+}
+.horizontal-scroll {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+  scroll-behavior: smooth; /* Add smooth scroll behavior */
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS devices */
+  scroll-snap-type: x mandatory; /* Enable snapping to each div */
+}
+
+.scroll-column {
+  flex: 0 0 auto;
+  scroll-snap-align: start; /* Snap each column to the start */
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.row.no-gutters {
+  display: flex !important;
+  white-space: nowrap;
+}
+
+.col {
+  display: inline-block;
+  vertical-align: top;
+  width: 400px; /* Adjust the width as needed */
+  margin-right: 30px; /* Add spacing between columns */
+}
+
+
+
+ /* Default styles for paragraphs */
+ .scroll-column p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+@media (max-width: 746px) {
+  /* Adjust the breakpoint as needed */
+  .p-mobile {
+    font-size: 14px;
+   
   }
-  
-  .opportunity__card {
-    text-align: center;
+  .col {
+    width: 100%; /* Full width for each column on mobile */
+    padding: 20px;
   }
-  
-  .opportunity__card .lottie.icon-size-medium img {
-    display: inline-block; /* Ensure the image doesn't have any extra spacing */
-    vertical-align: middle;
+
+}
+
+
+@media (max-width: 767px) {
+  .scroll-column p {
+    font-size: 14px; /* Decrease font size for mobile */
+    line-height: 1.4; /* Adjust line height as needed */
+    
   }
-  
+}
