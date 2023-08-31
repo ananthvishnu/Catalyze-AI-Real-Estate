@@ -15,7 +15,9 @@ import { Section7Component } from './section7/section7.component';
 import { Section8Component } from './section8/section8.component';
 import { Section9Component } from './section9/section9.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { AccordtionComponent } from './accordtion/accordtion.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,16 @@ import { FooterComponent } from './footer/footer.component';
     Section7Component,
     Section8Component,
     Section9Component,
-    FooterComponent
+    FooterComponent,
+    AccordtionComponent
    
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    NgbAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

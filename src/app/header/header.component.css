@@ -1,132 +1,17 @@
 
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color:rgb(228, 246 ,240) ;
-  border-radius: 10px;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Initially hide the dropdown list */
-.dropdown-list {
-  display: none;
-}
-
-/* Show the dropdown list when hovering over the dropdown button */
-.dropdown:hover .dropdown-list {
-  display: block;
-}
-
-/* Style the dropdown items */
-.dropdown__item {
-  padding: 10px;
-  background-color: white;
-  border-bottom: 1px solid #ccc;
-  text-decoration: none;
-  color: #333;
-}
-
-/* Style the dropdown items on hover */
-.dropdown__item:hover {
-  background-color: white;
   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Style for the collapsible menu button */
-.header__menu-button {
-  cursor: pointer;
-}
-
-/* Style for the menu lines in the button */
-.header__menu-line {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  margin: 4px 0;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-/* Rotate and fade in/out menu lines when the menu is open/closed */
-.header__menu-button.active .menu-line__top {
-  transform: rotate(-45deg) translate(-4px, 4px);
-  opacity: 0;
-}
-
-.header__menu-button.active .menu-line__middle {
-  transform: scaleX(0);
-}
-
-.header__menu-button.active .menu-line__bottom {
-  transform: rotate(45deg) translate(-4px, -4px);
-  opacity: 0;
-}
-
-/* Style for the menu container */
-.header__menu-container {
-  display: none;
-  /* Add other styles for the menu container, such as background color and positioning */
-}
-
-/* Show the menu container when the active class is applied */
-.header__menu-container.active {
-  display: block;
-  /* Add other styles for the expanded menu container */
-}
-
-
-
-
-
-
-
-
-
-
-.container {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
+  
 a {
   text-decoration: none;
   color: #07133b;
   font-family: "Poppins", sans-serif;
 }
 
-
-
-/* ============ desktop view ============ */
-@media all and (min-width: 992px) {
-  .navbar .nav-item .dropdown-menu {
-    display: none;
-  }
-  .navbar .nav-item:hover .nav-link {
-  }
-  .navbar .nav-item:hover .dropdown-menu {
-    display: block;
-  }
-  .navbar .nav-item .dropdown-menu {
-    margin-top: 0;
-  }
+.text {
+  font-family: "Poppins", sans-serif !important;
 }
-/* ============ desktop view .end// ============ */
+
+
 
 a {
   font-family: 15.89px "Poppins", sans-serif;
@@ -140,10 +25,6 @@ a {
   border-color: #1ad079;
 }
 
-/* Custom styles for the flat navigation bar */
-.navbar {
-  box-shadow: 0px 40px 40px -34px rgba(0, 0, 0, 0.08);
-}
 .navbar-brand {
   color: #343a40; /* Brand text color */
   margin-right: 100px;
@@ -168,7 +49,7 @@ a {
 }
 .dropdown-item {
   margin-top: 10%;
-
+ 
   color: rgb(7, 19, 59);
   border-radius: 10px;
   font-size: 15.85px; /* Dropdown item color */
@@ -178,18 +59,49 @@ a {
   background: rgb(228, 246, 240);
 }
 
+
 .navbar {
-  border-radius: 10px;
-  position: fixed;
-  top: 20px;
-  left: 65px;
-  right: 65px;
-  z-index: 1000;
-  background-color: #f8f9fa;
-  padding: 10px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+
+ position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100% !important;
+    height: 5.56rem;
+    padding-right: 2.33rem;
+    padding-left: 2.33rem;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: .69rem;
+    background-color: #fff;
+    box-shadow: 0 40px 40px -34px rgba(0,0,0,.08);
+    margin-left: 30px !important;
 }
+
+.hd{
+  position: fixed !important ;
+  left: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: auto !important;
+  z-index: 100 !important;
+  overflow: visible !important;
+  margin-bottom: -30px;
+  padding-top: 1.11rem !important;
+  padding-right: 1.11rem !important;
+  padding-left: 1.11rem !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
 
 .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
   display: block;
@@ -209,12 +121,31 @@ a {
 }
 
 
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+  .navbar a {
+    margin-right: 10px;
+  }
+}
+
+.container-fluid{
+  background-color: white;
+  border-radius: 10px;
+ 
+}
 
 
+.container{
+  margin-left: 0 !important;
+  margin-right: 0!important;
+}
 
 
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1420px !important;
+  }
 
-
-
-
-
+}

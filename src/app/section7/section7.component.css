@@ -1,0 +1,52 @@
+
+.item{
+background-color:#0d1b43;
+color: white;
+border: none;
+
+}
+
+
+/* Define a class for the selected panel */
+.selected-panel {
+    background-color: #f0f0f0; /* Change this to the desired background color */
+  }
+
+
+  /* Style the accordion toggle button */
+.accordion-toggle {
+    background-color:#07153d; /* Change this to the default button and panel background color */
+    color: white; /* Change this to the default button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  /* Style the active accordion item and its button */
+  .item.active .accordion-toggle {
+    background-color: rgb(20,31,69); /* Change this to the active button and panel background color */
+    color: white; /* Change this to the active button text color */
+  }
+
+
+  /* Style the accordion number wrap */
+.accordion__number-wrap {
+    background-color: rgb(20,31,69); /* Change this to the default number wrap background color */
+  }
+  
+  /* Style the accordion number wrap when the panel is active */
+  .item.active .accordion__number-wrap {
+    background-color:  #1ad079; /* Change this to the active number wrap background color */
+  }
+
+  p{
+    margin-right: -100px;
+  }
+
+  .accordion__number-wrap {
+    margin-right: 10px; /* Adjust this value to set the desired gap */
+  }

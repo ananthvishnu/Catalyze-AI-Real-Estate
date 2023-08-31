@@ -7,7 +7,7 @@
           id="w-node-ad35ca95-61ec-551f-fa50-0f6a522cc760-522cc75a"
           class="accordion-list"
         >
-          <div class="accordion is--active">
+          <!-- <div class="accordion">
             <div class="accordion-toggle">
               <div class="accordion__toggle-container">
                 <div class="accordion__number-wrap">
@@ -31,19 +31,15 @@
                   src="../../assets/images/63a1773692843c4f38b68ce3_first.webp"
                   loading="lazy"
                   sizes="(max-width: 479px) 84vw, (max-width: 767px) 324px, 100vw"
-                  srcset="
-                  ../../assets/images/63a1773692843c4f38b68ce3_first-p-500.webp   500w,
-                  ../../assets/images/63a1773692843c4f38b68ce3_first-p-800.webp   800w,
-                  ../../assets/images/63a1773692843c4f38b68ce3_first-p-1080.webp 1080w,
-                  ../../assets/images/63a1773692843c4f38b68ce3_first.webp        1296w
-                  "
-                  alt
+                  
                   class="start__img start__img--one start__img--mobile"
                 />
               </div>
             </div>
-          </div>
-          <div class="accordion">
+          </div> -->
+
+
+          <!-- <div class="accordion">
             <div class="accordion-toggle">
               <div class="accordion__toggle-container">
                 <div class="accordion__number-wrap">
@@ -79,8 +75,10 @@
                 />
               </div>
             </div>
-          </div>
-          <div class="accordion">
+          </div> -->
+
+
+          <!-- <div class="accordion">
             <div class="accordion-toggle">
               <div class="accordion__toggle-container">
                 <div class="accordion__number-wrap">
@@ -116,8 +114,10 @@
                 />
               </div>
             </div>
-          </div>
-          <div class="accordion">
+          </div> -->
+
+
+          <!-- <div class="accordion">
             <div class="accordion-toggle">
               <div class="accordion__toggle-container">
                 <div class="accordion__number-wrap">
@@ -154,66 +154,61 @@
                 />
               </div>
             </div>
+          </div> -->
+
+
+          <div ngbAccordion [closeOthers]="true" class="acco">
+            <div
+              ngbAccordionItem
+              *ngFor="let panel of panels; let i = index"
+              [collapsed]="panel !== currentPanel"
+              (click)="setCurrentPanel(panel)"
+              class="item"
+              [ngClass]="{ 'item': true, 'active': panel === currentPanel }"
+            >
+              <h2 ngbAccordionHeader >
+                <button ngbAccordionButton class="accordion-toggle"  [ngClass]="{ 'active': panel === currentPanel }">
+
+                  <div class="accordion__number-wrap">
+                    <div class="accordion__number">{{ i + 1}}</div>
+                  </div>
+                  {{ panel }} </button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody class="acco-body">
+                  <p class="">   {{ content[panels.indexOf(panel)] }}</p>
+                
+                  <!-- Display image only on mobile devices -->
+                  <div>
+                    <img
+                      src="{{ images[i] }}"
+                      alt=""
+                      class="img-fluid d-md-none"
+                      height="150"
+                      width="150"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
+
         </div>
         <div
           id="w-node-ad35ca95-61ec-551f-fa50-0f6a522cc799-522cc75a"
-          class="start__img-container"
-        >
+          class="start__img-container">
           <img
-            src="../../assets/images/63a1773692843c786db68d1e_first.webp"
-            loading="lazy"
-            id="w-node-ad35ca95-61ec-551f-fa50-0f6a522cc79a-522cc75a"
-            sizes="(max-width: 767px) 100vw, (max-width: 991px) 31vw, 34vw"
-            srcset="
-            ../../assets/images/63a1773692843c786db68d1e_first-p-500.webp   500w,
-            ../../assets/images/63a1773692843c786db68d1e_first-p-800.webp   800w,
-            ../../assets/images/63a1773692843c786db68d1e_first-p-1080.webp 1080w,
-            ../../assets/images/63a1773692843c786db68d1e_first-p-1600.webp 1600w,
-            ../../assets/images/63a1773692843c786db68d1e_first.webp        1800w
-            "
-            alt
-            class="start__img is--active"
-          /><img
-            src="../../assets/images/63a1773692843c2bf0b68cf9_second.webp"
-            loading="lazy"
-            sizes="(max-width: 767px) 100vw, (max-width: 991px) 31vw, 34vw"
-            srcset="
-            ../../assets/images/63a1773692843c2bf0b68cf9_second-p-500.webp   500w,
-            ../../assets/images/63a1773692843c2bf0b68cf9_second-p-800.webp   800w,
-            ../../assets/images/63a1773692843c2bf0b68cf9_second-p-1080.webp 1080w,
-            ../../assets/images/63a1773692843c2bf0b68cf9_second.webp        1800w
-            "
-            alt
-            class="start__img"
-          /><img
-            src="../../assets/images/63a1773692843ca0a6b68d4c_RE.webp"
-            loading="lazy"
-            alt
-            sizes="(max-width: 767px) 100vw, (max-width: 991px) 31vw, 34vw"
-            srcset="
-            ../../assets/images/63a1773692843ca0a6b68d4c_RE-p-500.webp   500w,
-            ../../assets/images/63a1773692843ca0a6b68d4c_RE-p-800.webp   800w,
-            ../../assets/images/63a1773692843ca0a6b68d4c_RE-p-1080.webp 1080w,
-            ../../assets/images/63a1773692843ca0a6b68d4c_RE-p-1600.webp 1600w,
-            ../../assets/images/63a1773692843ca0a6b68d4c_RE.webp        1800w
-            "
-            class="start__img"
-          /><img
-            src="../../assets/images/63a1773692843c48f7b68d57_fourth%20RE.webp"
-            loading="lazy"
-            alt
-            sizes="(max-width: 767px) 100vw, (max-width: 991px) 31vw, 34vw"
-            srcset="
-            ../../assets/images/63a1773692843c48f7b68d57_fourth%2520RE-p-500.webp   500w,
-            ../../assets/images/63a1773692843c48f7b68d57_fourth%2520RE-p-800.webp   800w,
-            ../../assets/images/63a1773692843c48f7b68d57_fourth%2520RE-p-1080.webp 1080w,
-            ../../assets/images/63a1773692843c48f7b68d57_fourth%2520RE-p-1600.webp 1600w,
-            ../../assets/images/63a1773692843c48f7b68d57_fourth%20RE.webp          1800w
-            "
-            class="start__img"
-          />
+          src="{{ images[panels.indexOf(currentPanel)] }}"
+          alt=""
+          class="img-fluid d-none d-md-block"
+         
+        />
         </div>
+
+
+
+
         <div
           id="w-node-ad35ca95-61ec-551f-fa50-0f6a522cc79e-522cc75a"
           class="start__content-container"
