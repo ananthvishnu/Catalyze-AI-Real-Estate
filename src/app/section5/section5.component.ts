@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-section5',
@@ -47,6 +47,22 @@ export class Section5Component {
 
   resetButtonColors() {
     // Reset all button colors here
+  }
+
+
+  isMobileView: boolean = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  constructor() {
+    this.checkScreenSize();
+  }
+
+  private checkScreenSize() {
+    this.isMobileView = window.innerWidth <= 768; // Adjust the breakpoint as needed
   }
 
 

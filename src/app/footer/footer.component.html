@@ -236,121 +236,75 @@
           class="footer__columns grid-column__links"
         >
           <!------First dropdown-->
+         <!-- Loop through your footer links and apply dropdown behavior -->
+         <ng-container *ngFor="let link of footerLinks; let i = index">
           <div class="footer__links-container">
-            <div class="dropdown__links-toggle" (click)="toggleDropdown(1)">
-              <a data-link="white" class="dropdown__link w-inline-block"
-                ><div class="text-weight-medium">Financial Services</div>
+            <div
+              class="dropdown__links-toggle"
+              (click)="toggleDropdown(i)"
+              *ngIf="isMobile"
+            >
+              <a data-link="white" class="dropdown__link w-inline-block">
+                <div class="text-weight-medium" >{{ link.title }}</div>
                 <div class="button__dot-wrap">
-                  <div class="button__dot mod--white"></div></div></a
-              ><img
-                src="../../assets/fonts/63a1773692843c2e9ab68d1b_S.svg"
-                loading="lazy"
-                alt
-                class="dropdown__link-icon"
-              />
-            </div>
-
-            <div class="dropdown__links-body" *ngIf="isDropdownOpen(1)">
-              <div class="dropdown__links">
-                <a
-                  data-link="white"
-                  href="#"
-                  class="dropdown__link w-inline-block"
-                  ><div>Pricing</div>
-                  <div class="button__dot-wrap">
-                    <div class="button__dot mod--white"></div></div></a
-                ><a
-                  data-link="white"
-                  href="#"
-                  class="dropdown__link w-inline-block"
-                  ><div class="button__dot-wrap">
-                    <div class="button__dot mod--white"></div>
-                  </div>
-                  <div>Blog</div></a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--Second dropdown-->
-          <div class="footer__links-container">
-            <div class="dropdown__links-toggle" (click)="toggleDropdown(2)">
-              <a
-                data-link="white"
-                aria-current="page"
-                class="dropdown__link w-inline-block w--current"
-                ><div class="text-weight-medium">Real Estate</div>
-                <div class="button__dot-wrap">
-                  <div class="button__dot mod--white"></div></div></a
-              ><img
-                src="../../assets/fonts/63a1773692843c2e9ab68d1b_S.svg"
-                loading="lazy"
-                alt
-                class="dropdown__link-icon"
-              />
-            </div>
-            <div class="dropdown__links-body" *ngIf="isDropdownOpen(2)">
-              <div class="dropdown__links">
-                <a
-                  data-link="white"
-                  href="#"
-                  class="dropdown__link w-inline-block"
-                  ><div>Pricing</div>
-                  <div class="button__dot-wrap">
-                    <div class="button__dot mod--white"></div></div></a
-                ><a
-                  data-link="white"
-                  href="/real-estate/blog"
-                  class="dropdown__link w-inline-block"
-                  ><div class="button__dot-wrap">
-                    <div class="button__dot mod--white"></div>
-                  </div>
-                  <div>Blog</div></a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--Third dropdown-->
-          <div class="footer__links-container">
-            <div class="dropdown__links-toggle" (click)="toggleDropdown(3)">
-              <a
-                data-link="white"
-                aria-current="page"
-                class="dropdown__link w-inline-block w--current"
-                ><div class="text-weight-medium">Social Media</div>
-                <div class="button__dot-wrap">
-                  <div class="button__dot mod--white"></div></div
-              ></a>
+                  <div class="button__dot mod--white"></div>
+                </div>
+              </a>
               <img
-                src="../../assets/fonts/63a1773692843c2e9ab68d1b_S.svg"
+                src="{{ link.icon }}"
                 loading="lazy"
                 alt
                 class="dropdown__link-icon"
               />
             </div>
-            <div class="dropdown__links-body" *ngIf="isDropdownOpen(3)">
+    
+            <div
+              class="dropdown__links-toggle"
+              *ngIf="!isMobile"
+            >
+              <a data-link="white" class="dropdown__link w-inline-block">
+                <div class="text-weight-medium">{{ link.title }}</div>
+                <div class="button__dot-wrap">
+                  <div class="button__dot mod--white"></div>
+                </div>
+              </a>
+    
+              <!-- Sub-links for full screen -->
+              <div class="dropdown__links-body" *ngIf="!isMobile" style="margin-top: 10px;">
+                <div class="dropdown__links">
+                  <a
+                    data-link="white"
+                    href="{{ subLink.url }}"
+                    class="dropdown__link w-inline-block"
+                    *ngFor="let subLink of link.subLinks"
+                  >
+                    <div class="button__dot-wrap">
+                      <div class="button__dot mod--white"></div>
+                    </div>
+                    <div>{{ subLink.title }}</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Dropdown content for mobile -->
+            <div class="dropdown__links-body" *ngIf="isMobile && isDropdownOpen(i)">
               <div class="dropdown__links">
                 <a
                   data-link="white"
-                  href="#"
+                  href="{{ subLink.url }}"
                   class="dropdown__link w-inline-block"
-                  ><div>Linkedin</div>
+                  *ngFor="let subLink of link.subLinks"
+                >
                   <div class="button__dot-wrap">
-                    <div class="button__dot mod--white"></div></div
-                ></a>
-                <a
-                  data-link="white"
-                  href="/real-estate/blog"
-                  class="dropdown__link w-inline-block"
-                  ><div class="button__dot-wrap">
                     <div class="button__dot mod--white"></div>
                   </div>
-                  <div></div
-                ></a>
+                  <div>{{ subLink.title }}</div>
+                </a>
               </div>
             </div>
           </div>
+        </ng-container>
           <a href="#" class="footer__data-container w-inline-block"
             ><div class="footer__data-button">Do not sell my data</div>
             <img

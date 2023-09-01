@@ -1,4 +1,4 @@
-import { Component,HostListener } from '@angular/core';
+import { Component,HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validator, Validators,FormBuilder } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormControl, FormGroup, Validator, Validators,FormBuilder } from '@angu
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
   contactForm = new FormGroup({
     name: new FormControl('',[Validators.required, Validators.maxLength(10),Validators.pattern("^[a-zA-Z]+$")]),
     email:new FormControl('',[Validators.required,Validators.email]),
@@ -41,30 +41,83 @@ export class FooterComponent {
 
 
 
-    activeDropdown: number | null = null;
+    // activeDropdown: number | null = null;
 
-    toggleDropdown(dropdownNumber: number) {
-        if (this.activeDropdown === dropdownNumber) {
-            this.activeDropdown = null;
-        } else {
-            this.activeDropdown = dropdownNumber;
-        }
+    // toggleDropdown(dropdownNumber: number) {
+    //     if (this.activeDropdown === dropdownNumber) {
+    //         this.activeDropdown = null;
+    //     } else {
+    //         this.activeDropdown = dropdownNumber;
+    //     }
+    // }
+
+    // isDropdownOpen(dropdownNumber: number): boolean {
+    //     return this.activeDropdown === dropdownNumber;
+    // }
+
+    // //Listen for window resize events and reset activeDropdown if needed
+    // @HostListener('window:resize', ['$event'])
+    // onResize(event: Event) {
+    //     if (window.innerWidth >= 768) {
+    //         this.activeDropdown = null;
+    //     }
+    // }
+
+
+
+
+
+    isMobile!: boolean;
+    dropdownOpen: boolean[] = [];
+    
+    footerLinks = [
+      {
+        title: 'Financial Services',
+        icon: 'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2e9ab68d1b_S.svg',
+        subLinks: [
+          { title: 'Pricing', url: '#' },
+          { title: 'Blog', url: '#' }
+        ]
+      },
+      {
+        title: 'Real Estate',
+        icon: 'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2e9ab68d1b_S.svg',
+        subLinks: [
+          { title: 'Pricing', url: '#' },
+          { title: 'Blog', url: '/real-estate/blog' }
+        ]
+      },
+    
+      {
+        title: 'Social media',
+        icon: 'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2e9ab68d1b_S.svg',
+        subLinks: [
+          { title: 'LinkedIn', url: '#' },
+         
+        ]
+      },
+      // Add other footer links here
+    ];
+    
+    
+    
+    ngOnInit() {
+      this.checkMobile();
+      window.addEventListener('resize', this.checkMobile.bind(this));
+     
     }
-
-    isDropdownOpen(dropdownNumber: number): boolean {
-        return this.activeDropdown === dropdownNumber;
+    
+    checkMobile() {
+      this.isMobile = window.innerWidth <= 768;
     }
-
-    //Listen for window resize events and reset activeDropdown if needed
-    @HostListener('window:resize', ['$event'])
-    onResize(event: Event) {
-        if (window.innerWidth >= 768) {
-            this.activeDropdown = null;
-        }
+    
+    toggleDropdown(index: number) {
+      this.dropdownOpen[index] = !this.dropdownOpen[index];
     }
-
-
-
-
+    
+    isDropdownOpen(index: number) {
+      return this.dropdownOpen[index];
+      
+    }
     
 }

@@ -84,6 +84,7 @@
   .container-fluid{
     background-color: #fff;
     border-radius: 5px;
+    padding-bottom: 10px;
   }
 
   .a{
@@ -137,3 +138,4 @@
   }
 
 }
+

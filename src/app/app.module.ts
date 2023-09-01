@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AccordtionComponent } from './accordtion/accordtion.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
-    NgbAccordionModule
+    NgbAccordionModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
