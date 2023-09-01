@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validator, Validators } from '@angular/forms';
+import { Component,HostListener } from '@angular/core';
+import { FormControl, FormGroup, Validator, Validators,FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-footer',
@@ -41,7 +41,30 @@ export class FooterComponent {
 
 
 
+    activeDropdown: number | null = null;
+
+    toggleDropdown(dropdownNumber: number) {
+        if (this.activeDropdown === dropdownNumber) {
+            this.activeDropdown = null;
+        } else {
+            this.activeDropdown = dropdownNumber;
+        }
+    }
+
+    isDropdownOpen(dropdownNumber: number): boolean {
+        return this.activeDropdown === dropdownNumber;
+    }
+
+    //Listen for window resize events and reset activeDropdown if needed
+    @HostListener('window:resize', ['$event'])
+    onResize(event: Event) {
+        if (window.innerWidth >= 768) {
+            this.activeDropdown = null;
+        }
+    }
 
 
-  
+
+
+    
 }

@@ -5,10 +5,13 @@
         <div class="approach__tabs-menu w-tab-menu">
           <!--Button 1 -->
           <a
-            class="approach__tabs-link w-inline-block w-tab-link w--current"
+      
+            class="approach__tabs-link w-inline-block w-tab-link"
             (click)="showContent(1)"
+            (click)="handleButtonClick('button1')"
+            
           >
-            <div class="approach__number-container">
+            <div class="approach__number-container" (click)="handleButtonClick('button1')" [ngClass]="{'active': activeButton === 'button1'}">
               <div class="approach__tab-number">1</div>
             </div>
             <div class="approach__link-text">Big<br />Data</div>
@@ -19,8 +22,9 @@
           <a
             class="approach__tabs-link w-inline-block w-tab-link"
             (click)="showContent(2)"
+            (click)="handleButtonClick('button2')"
           >
-            <div class="approach__number-container">
+            <div class="approach__number-container" (click)="handleButtonClick('button2')" [ngClass]="{'active': activeButton === 'button2'}">
               <div class="approach__tab-number">2</div>
             </div>
             <div class="approach__link-text">Event-<br />Driven</div>
@@ -30,8 +34,11 @@
           <a
             class="approach__tabs-link w-inline-block w-tab-link"
             (click)="showContent(3)"
+            (click)="handleButtonClick('button3')"
+
+            
           >
-            <div class="approach__number-container">
+            <div class="approach__number-container" (click)="handleButtonClick('button3')" [ngClass]="{'active': activeButton === 'button3'}">
               <div class="approach__tab-number">3</div>
             </div>
             <div class="approach__link-text">Artifical<br />Intelligence</div>
@@ -41,8 +48,10 @@
           <a
             class="approach__tabs-link w-inline-block w-tab-link"
             (click)="showContent(4)"
+            (click)="handleButtonClick('button4')"
+
           >
-            <div class="approach__number-container">
+            <div class="approach__number-container" (click)="handleButtonClick('button4')" [ngClass]="{'active': activeButton === 'button4'}">
               <div class="approach__tab-number">4</div>
             </div>
             <div class="approach__link-text">Predictive<br />Analytics</div>

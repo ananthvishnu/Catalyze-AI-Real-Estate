@@ -289,10 +289,12 @@
       }
 
       input[type="radio"]:checked ~ .w-form-label {
-        color: #1ad079;
+        color: #1ad079 !important;
+        
       }
+    
       input[type="checkbox"]:checked ~ .w-form-label {
-        color: #1ad079;
+        color: #1ad079 !important;
       }
       .radio-wrap:hover .radio-button {
         border-color: #fff;
@@ -300,11 +302,20 @@
       }
       .radio-wrap:has(input[type="radio"]:checked) {
         border-color: #1ad079;
+        color: #1ad079;
+        
       }
       .radio-button.w--redirected-checked {
         border-color: #1ad079 !important;
         box-shadow: none !important;
       }
+      input[type="radio"]:checked ~ .w-form-formradioinput  {
+        color: #1ad079 !important;
+        background-color: #1ad079 !important;
+      }
+
+   
+     
 
       @-webkit-keyframes BGhero {
         0% {

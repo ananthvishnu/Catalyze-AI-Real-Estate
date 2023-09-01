@@ -9,3 +9,34 @@
     color: white; /* Change this to your desired hover background color */
     /* Additional styles for when the element is hovered */
   }
+
+  .active {
+    background-color: #1ad079;
+    color: white;
+  }
+
+
+
+  .approach__tabs-menu.w-tab-menu {
+    overflow-x: scroll !important;
+    white-space: nowrap !important; /* Prevent tab links from wrapping */
+    -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling on iOS */
+  }
+  
+  /* Hide scrollbar for the tab content */
+  .approach__tabs-content.w-tab-content {
+    overflow: hidden !important;
+  }
+
+  /* Remove the default scrollbar styling */
+  .approach__tabs-menu::-webkit-scrollbar,
+  .approach__tabs-content::-webkit-scrollbar {
+    display: none !important;
+  }
+
+
+  @media screen and (max-width: 767px){
+  .approach__tabs-link.w--current {
+
+  }
+}

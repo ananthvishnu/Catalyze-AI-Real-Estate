@@ -9,7 +9,7 @@ import { NgbAccordionConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class Section7Component {
   panels: string[] = ['Provide your information', 'Select your location', 'Check Out', 'Access your dashboard'];
-  content: string[] = ['Give us some details on yourself and your firm.', 'Provide a zip code and we will provide you with the highest propensity', 'On the check out page you can select the products and quantity of leads you would like per month.', 'You have immediate access to your dasboard and your lead'];
+  content: string[] = ['Give us some details on yourself and your firm.', 'Provide a zip code and we will provide you with the highest propensity', 'On the check out page you can select the products and quantity of leads', 'You have immediate access to your dasboard and your lead'];
   images: string[] = [
     'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c2796b68ce6_fourth%20FS.webp',
      'https://assets.website-files.com/63a1773692843c14b3b68ca0/63a1773692843c786db68d1e_first.webp',

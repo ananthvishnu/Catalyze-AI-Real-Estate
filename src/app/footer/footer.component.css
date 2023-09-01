@@ -25,3 +25,29 @@
     padding: 0;
   }
 }
+
+
+
+input[type=radio]#Green {
+  accent-color: #1ad079;
+}
+
+
+.dot{
+  margin-top: 5px;
+}
+
+
+
+/* Apply styles when hovering over the element */
+a:hover {
+  color: white; /* Change this to the desired hover color value */
+}
+
+
+
+
+
+
+
+
