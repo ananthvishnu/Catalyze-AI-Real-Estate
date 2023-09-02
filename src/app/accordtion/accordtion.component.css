@@ -1,0 +1,131 @@
+.full-width{
+    position: absolute !important;
+    left: 4rem  !important ;
+    z-index: 0  !important;
+    height: 91.6rem  !important;
+    min-width: 116.46rem  !important;
+    -o-object-fit: cover  !important;
+    object-fit: cover  !important;
+}
+
+img {
+    vertical-align: middle  !important;
+    display: inline-block !important;
+    max-width: 100% !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+    border: none !important;
+}
+
+img {
+    overflow-clip-margin: content-box !important;
+    overflow: clip !important;
+}
+
+
+.background-owl{
+    position: absolute !important;
+    top: -17.5rem !important;
+    z-index: 0 !important;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    overflow: hidden !important;
+    width: 100vw !important;
+    height: 91.6rem !important;
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+} 
+
+.testimonial__slider-container {
+    padding: 3.33rem !important;
+    border-radius: 1.11rem !important;
+    background-color: #fff !important;
+    margin-left: 10px ;
+}
+
+
+.testimonial__quote-icon {
+    width: 3.33rem !important;
+    margin-left: 1.53rem !important;
+    -o-object-fit: contain !important;
+    object-fit: contain !important;
+}
+
+
+.out{
+    position: absolute !important;
+    left: 0 !important;
+    top: auto !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 1 !important;
+    height: 10% !important;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(248,249,251,0)),to(#f8f9fb)) !important;
+    background-image: linear-gradient(180deg,rgba(248,249,251,0),#f8f9fb) !important;
+}
+
+.banner {
+    position: relative;
+    padding: 20px;
+}
+
+.banner.owl-prev , .owl-next  {
+    width: 110px !important;
+    height: 200px !important;
+  
+    color: black !important;
+}
+
+
+ .owl-nav {
+ 
+    position: absolute !important;
+}
+
+@media screen and (max-width: 767px) {
+    .testimonial__slider-container {
+        padding: 1.5rem 1rem !important;
+        border-radius: 0.625rem !important;
+    }
+
+    .container, .banner {
+        padding-right: 1rem ;
+        padding-left: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .testimonial__slider-container {
+        padding: 1.5rem 1rem !important;
+        border-radius: 0.625rem !important;
+        margin: 0;
+       
+    }
+    .container1{
+        padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    }
+
+    .is--mobile {
+        display: block;
+    }
+    .full-width{
+        left: auto;
+        height: 190.16rem;
+        min-width: 169.95rem
+    }
+    .banner{
+        padding: 0;
+    }
+}
+
+
+i{
+    color: red;
+    background-color: red;
+}

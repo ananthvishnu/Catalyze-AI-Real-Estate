@@ -18,7 +18,9 @@ import { FooterComponent } from './footer/footer.component';
 import { AccordtionComponent } from './accordtion/accordtion.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+//import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import BrowserAnimationsModule
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     FormsModule,
     NgbModule,
     NgbAccordionModule,
-    CarouselModule.forRoot()
+    CarouselModule,
+    BrowserAnimationsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
