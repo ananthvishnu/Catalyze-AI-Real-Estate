@@ -145,3 +145,16 @@
   box-shadow: none !important;
 }
 
+
+
+
+
+.fade-in-element {
+  width: 200px;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}

@@ -1,3 +1,14 @@
+.testi-head{
+    text-align: center;
+    color: #07133b;
+    z-index: 1;
+    font-size: 36.667px;
+    margin-bottom: 30px;
+}
+
+  
+  
+
 .full-width{
     position: absolute !important;
     left: 4rem  !important ;

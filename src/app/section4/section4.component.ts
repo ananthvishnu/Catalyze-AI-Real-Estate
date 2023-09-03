@@ -1,9 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-section4',
   templateUrl: './section4.component.html',
-  styleUrls: ['./section4.component.css']
+  styleUrls: ['./section4.component.css'],
+  animations: [
+    trigger('rotate', [
+      state('normal', style({ transform: 'rotate(0deg)' })),
+      state('hovered', style({ transform: 'rotate(360deg)' })),
+      transition('normal <=> hovered', animate('1100ms ease-in-out')),
+    ]),
+    trigger('zoomOut', [
+      state('hovered', style({ transform: 'scale(0.35)' })),
+      state('unhovered', style({ transform: 'scale(1)' })),
+      transition('hovered => unhovered', animate('100ms ease-in-out')),
+    ]),
+  ],
 })
 export class Section4Component implements OnInit{
   ngOnInit(): void {
@@ -24,5 +37,29 @@ export class Section4Component implements OnInit{
         }
       });
     });
+  }
+
+
+
+//animation svg
+animationState = 'normal';
+
+  onMouseEnter() {
+    this.animationState = 'hovered';
+  }
+
+  onMouseLeave() {
+    this.animationState = 'normal';
+  }
+
+//************************************ */
+animationState1 = 'normal';
+
+  onMouseEnter1() {
+    this.animationState1 = 'hovered';
+  }
+
+  onMouseLeave1() {
+    this.animationState1 = 'normal';
   }
 }
