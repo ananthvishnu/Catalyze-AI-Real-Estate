@@ -46,7 +46,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
     NgbModule,
     NgbAccordionModule,
     CarouselModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
     
   ],
   providers: [],

@@ -1,7 +1,5 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild ,AfterViewInit } from '@angular/core';
-// import { SwiperModule } from 'swiper/types/shared';
-// import { CarouselModule } from 'ngx-owl-carousel-o';
-// import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Component, OnInit, Renderer2, ViewChild  } from '@angular/core';
+
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 import { OwlOptions  } from 'ngx-owl-carousel-o';
@@ -45,7 +43,7 @@ export class AccordtionComponent implements OnInit  {
 
   // @ViewChild('carousel') private carousel!: ElementRef;
 
-  @ViewChild('carousel') private carousel: any; // Use OwlCarousel instead of ElementRef
+  @ViewChild('carousel') private carousel!: any; // Use OwlCarousel instead of ElementRef
 
   constructor(private renderer: Renderer2) {}
 
@@ -58,16 +56,14 @@ export class AccordtionComponent implements OnInit  {
     );
   }
 
-
-
-  onClickNext(): void {
-    console.log('Next button clicked');
-    this.carousel.next();
+  // Function to move to the next slide
+  moveToNextSlide() {
+    this.carousel.nativeElement.querySelector('.carousel-control-next').click();
   }
-  
-  onClickPrev(): void {
-    console.log('Previous button clicked');
-    this.carousel.prev();
+
+  // Function to move to the previous slide
+  moveToPrevSlide() {
+    this.carousel.nativeElement.querySelector('.carousel-control-prev').click();
   }
 
   

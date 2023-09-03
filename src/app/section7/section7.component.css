@@ -1,11 +1,13 @@
 
 .item{
-background-color:#0d1b43;
+background-color:#07133b;
 color: white;
 border: none;
 
 }
-
+.item:active{
+  background-color: #07153d;
+}
 
 /* Define a class for the selected panel */
 .selected-panel {
@@ -15,7 +17,7 @@ border: none;
 
   /* Style the accordion toggle button */
 .accordion-toggle {
-    background-color:#07153d; /* Change this to the default button and panel background color */
+    background-color:#07153d; 
     color: white; /* Change this to the default button text color */
     padding: 10px 20px;
     border-radius: 10px;
@@ -53,5 +55,8 @@ border: none;
     margin-right: 10px; /* Adjust this value to set the desired gap */
   }
 
-
+.acco-body{
+  background-color: rgb(20,31,69) ;
+}
   
+

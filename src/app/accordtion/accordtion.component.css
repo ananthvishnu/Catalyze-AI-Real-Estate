@@ -73,41 +73,64 @@ img {
     padding: 20px;
 }
 
-.banner.owl-prev , .owl-next  {
-    width: 110px !important;
-    height: 200px !important;
+
+
+
+owl-carousel-o {
+    position: relative;
+  }
   
+  ::ng-deep .owl-prev, ::ng-deep .owl-next {
+    position:absolute !important;
+    top: -50px !important;
+    background-color: transparent !important ;
     color: black !important;
-}
+    font-size: 25px !important;
+   
+  }
+  
+  ::ng-deep .owl-prev  {
+    left: 0;
+
+  }
+  
+  ::ng-deep .owl-next  {
+    right: 0;
+  }
 
 
- .owl-nav {
  
-    position: absolute !important;
-}
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 767px) {
-    .testimonial__slider-container {
-        padding: 1.5rem 1rem !important;
-        border-radius: 0.625rem !important;
-    }
-
+ 
     .container, .banner {
         padding-right: 1rem ;
         padding-left: 1rem;
     }
+
+
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 740px) {
     .testimonial__slider-container {
         padding: 1.5rem 1rem !important;
         border-radius: 0.625rem !important;
         margin: 0;
+        margin-left: 5px;
+        margin-right: 5px;
        
     }
     .container1{
-        padding-right: 1rem !important;
+    padding-right: 1rem !important;
     padding-left: 1rem !important;
     }
 
@@ -122,10 +145,20 @@ img {
     .banner{
         padding: 0;
     }
-}
+    .hed1{
+        font-size: 35px !important;
+        padding-left: 35px !important;
+        padding-right: 35px !important;
 
+    }
 
-i{
-    color: red;
-    background-color: red;
+    ::ng-deep .owl-prev  {
+        left: -7px;
+    
+      }
+      
+      ::ng-deep .owl-next  {
+        right: -7px;
+      }
+    
 }
