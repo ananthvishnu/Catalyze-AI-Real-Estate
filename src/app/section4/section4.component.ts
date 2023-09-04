@@ -16,6 +16,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       state('unhovered', style({ transform: 'scale(1)' })),
       transition('hovered => unhovered', animate('100ms ease-in-out')),
     ]),
+    trigger('slideRight', [
+      state('normal', style({ transform: 'translateX(0)' })),
+      state('hovered', style({ transform: 'translateX(70px)' })),
+      transition('normal => hovered', animate('0.3s ease')),
+    ]),
+    trigger('zoomOut1', [
+      state('hovered', style({ transform: 'scale(0.8)' })),
+      state('unhovered', style({ transform: 'scale(1)' })),
+      transition('hovered => unhovered', animate('1600ms ease-in-out')),
+    ]),
   ],
 })
 export class Section4Component implements OnInit{
@@ -62,4 +72,32 @@ animationState1 = 'normal';
   onMouseLeave1() {
     this.animationState1 = 'normal';
   }
+
+
+
+//***************************************** */
+// New method for slide-right animation
+animationStateSlideRight = 'normal';
+
+onMouseEnterSlideRight() {
+  this.animationStateSlideRight = 'hovered';
+}
+
+onMouseLeaveSlideRight() {
+  this.animationStateSlideRight = 'normal';
+}
+
+
+animationZoomOut = 'normal';
+
+onMouseEnterZoomOut() {
+  this.animationZoomOut = 'hovered';
+}
+
+onMouseLeaveZoomOut() {
+  this.animationZoomOut = 'normal';
+}
+
+
+
 }

@@ -93,7 +93,7 @@ owl-carousel-o {
   
   ::ng-deep .owl-prev, ::ng-deep .owl-next {
     position:absolute !important;
-    top: -50px !important;
+    top: -60px !important;
     background-color: transparent !important ;
     color: black !important;
     font-size: 25px !important;
@@ -120,15 +120,7 @@ owl-carousel-o {
 
 
 
-@media screen and (max-width: 767px) {
- 
-    .container, .banner {
-        padding-right: 1rem ;
-        padding-left: 1rem;
-    }
 
-
-}
 
 
 @media screen and (max-width: 740px) {
@@ -172,4 +164,30 @@ owl-carousel-o {
         right: -7px;
       }
     
+}
+
+
+
+@media screen and (max-width: 767px) {
+ 
+    .container, .banner {
+        padding-right: 1rem ;
+        padding-left: 1rem;
+    }
+    .testi-head {
+        font-size: 35px !important;
+       
+    }
+    ::ng-deep .owl-next {
+        right: -10;
+    }
+
+    ::ng-deep .owl-prev {
+        left: -15;
+    }
+
+    .banner {
+        padding: 0;
+    }
+
 }
