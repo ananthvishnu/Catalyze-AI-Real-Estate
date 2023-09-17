@@ -20,7 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 //import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import BrowserAnimationsModule
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ParallxComponent } from './parallx/parallx.component'; // Import BrowserAnimationsModule
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
     Section8Component,
     Section9Component,
     FooterComponent,
-    AccordtionComponent
+    AccordtionComponent,
+    ParallxComponent
    
   ],
   imports: [

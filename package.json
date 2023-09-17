@@ -21,6 +21,7 @@
     "@ng-bootstrap/ng-bootstrap": "^15.1.1",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
+    "gsap": "^3.12.2",
     "ngx-bootstrap": "^11.0.2",
     "ngx-owl-carousel-o": "^16.0.0",
     "rxjs": "~7.8.0",
