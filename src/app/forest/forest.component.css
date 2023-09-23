@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: linear-gradient(#d3ce89 ,#97ce89);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo{
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li{
+  list-style: none;
+  margin-left: 30px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4em;
+  padding: 6px 10px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+header ul li a:hover,
+header ul li a.active{
+  color: #28b605;
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.7s ease;
+}
+
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#title{
+  position: absolute;
+  white-space: nowrap;
+  color: #fff;
+  font-size: 8em;
+  font-weight: 900;
+  z-index: 9;
+  right: -890px;
+}
+
+#background1{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+#layer3{
+  z-index: 10;
+}
+
+
+.btn{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #28b605;
+  font-size: 2em;
+  z-index: 9;
+  transform: translateY(120px);
+}
+
+.content{
+  position: relative;
+  padding: 100px;
+  background: #12381A;
+  z-index: 10;
+}
+
+.content h2{
+  color: #fff;
+  font-size: 2.em;
+  text-align: center;
+  margin: 15px;
+}
+
+.content p{
+  color: #fff;
+  font-size: 1.2em;
+  text-align: justify;
+  text-indent: 100px;
+}

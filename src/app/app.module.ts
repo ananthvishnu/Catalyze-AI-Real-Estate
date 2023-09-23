@@ -21,7 +21,13 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 //import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ParallxComponent } from './parallx/parallx.component'; // Import BrowserAnimationsModule
+import { ParallxComponent } from './parallx/parallx.component';
+import { SunsetComponent } from './sunset/sunset.component';
+import { ForestComponent } from './forest/forest.component';
+import { AdventureComponent } from './adventure/adventure.component';
+import { NightgoastComponent } from './nightgoast/nightgoast.component';
+import { Forest2Component } from './forest2/forest2.component';
+import { TravelComponent } from './travel/travel.component'; // Import BrowserAnimationsModule
 
 @NgModule({
   declarations: [
@@ -38,7 +44,13 @@ import { ParallxComponent } from './parallx/parallx.component'; // Import Browse
     Section9Component,
     FooterComponent,
     AccordtionComponent,
-    ParallxComponent
+    ParallxComponent,
+    SunsetComponent,
+    ForestComponent,
+    AdventureComponent,
+    NightgoastComponent,
+    Forest2Component,
+    TravelComponent
    
   ],
   imports: [
